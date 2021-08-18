@@ -15,6 +15,20 @@ export const collectCoverage = async (
     workingDirectory?: string,
     coverageFile?: string
 ): Promise<[Report, JsonReport | undefined]> => {
+    console.log(
+        'testCommand',
+        testCommand,
+        'packageManager',
+        packageManager,
+        'skipStep',
+        skipStep,
+        'branch',
+        branch,
+        'workingDirectory',
+        workingDirectory,
+        'coverageFile',
+        coverageFile
+    );
     const source = await getRawCoverage(
         testCommand,
         packageManager,
