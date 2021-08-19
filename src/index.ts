@@ -115,6 +115,7 @@ async function run() {
         }
 
         if (isInPR && baseReport && pull_request) {
+            console.log('isInPR', isInPR);
             await generatePRReport(
                 (icons as Record<string, Icons>)[iconType],
                 headReport,
@@ -127,6 +128,7 @@ async function run() {
                 customTitle
             );
         } else if (!isInPR) {
+            console.log('is not in InPR', isInPR);
             await generateCommitReport(
                 (icons as Record<string, Icons>)[iconType],
                 headReport,
